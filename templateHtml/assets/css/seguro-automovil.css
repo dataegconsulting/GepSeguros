@@ -1,0 +1,171 @@
+/* =============================================================================
+  PAGE: SEGURO AUTOMÓVIL
+  - Solo estilos de esta página (no navbar/mega/footer global)
+============================================================================= */
+
+/* Hero */
+#seguro-automovil.section-page-hero {
+  background:
+    radial-gradient(900px 380px at 15% 10%, rgba(0, 117, 90, 0.12), transparent 55%),
+    radial-gradient(700px 320px at 85% 30%, rgba(0, 34, 79, 0.08), transparent 60%),
+    linear-gradient(180deg, var(--soft), #ffffff);
+}
+
+.hero-mini-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mini-stat {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-sm);
+}
+.mini-stat i {
+  font-size: 18px;
+  color: var(--green);
+}
+
+/* Card derecha del hero */
+.auto-hero-card { position: relative; overflow: hidden; }
+.auto-hero-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(700px 320px at 18% 15%, rgba(0,117,90,0.10), transparent 60%),
+    radial-gradient(700px 320px at 92% 55%, rgba(0,34,79,0.08), transparent 62%);
+  pointer-events: none;
+}
+.auto-hero-card > * { position: relative; z-index: 1; }
+
+.auto-hero-media {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.auto-hero-media img { width: 100%; display: block; }
+
+.coverage-card { transition: transform 180ms ease, box-shadow 220ms ease; }
+.coverage-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Form inputs (solo para esta página) */
+#autoQuoteForm .form-control,
+#autoQuoteForm .form-select {
+  border-radius: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(0,0,0,0.10);
+}
+
+#autoQuoteForm .form-control:focus,
+#autoQuoteForm .form-select:focus {
+  border-color: rgba(0,117,90,0.45);
+  box-shadow: 0 0 0 0.2rem rgba(0,117,90,0.12);
+}
+
+/* Tips */
+.tips-list { display: grid; gap: 12px; }
+.tip-item {
+  display: grid;
+  grid-template-columns: 54px 1fr;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-sm);
+}
+.tip-ico {
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,117,90,0.10);
+  color: var(--green);
+  font-size: 22px;
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .hero-mini-stats { grid-template-columns: 1fr; }
+}
+@media (max-width: 575.98px) {
+  .tip-item { grid-template-columns: 48px 1fr; padding: 12px; }
+  .tip-ico { width: 48px; height: 48px; border-radius: 16px; font-size: 20px; }
+}
+
+/* CTA con imagen (en lugar de formulario) */
+.quote-cta{
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  gap: 18px;
+  padding: 16px;
+  border-radius: 22px;
+  text-decoration: none;
+  color: inherit;
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-md);
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+
+.quote-cta:hover{
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.quote-cta__img{
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: rgba(0,0,0,0.03);
+}
+
+.quote-cta__img img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.quote-cta__content{
+  display: grid;
+  align-content: center;
+  gap: 8px;
+}
+
+.quote-cta__title{
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: var(--blue);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quote-cta__title i{ color: var(--green); }
+
+.quote-cta__text{
+  color: #6b7280;
+}
+
+.quote-cta__btn{
+  margin-top: 6px;
+}
+
+@media (max-width: 991.98px){
+  .quote-cta{ grid-template-columns: 1fr; }
+  .quote-cta__img{ height: 190px; }
+}

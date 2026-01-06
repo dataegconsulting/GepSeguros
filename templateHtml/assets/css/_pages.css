@@ -1,0 +1,161 @@
+/* =============================================================================
+  GEPETROL SEGUROS – PAGES (v1.0)
+  - CSS por página (NO meter navbar/mega/footer global aquí)
+  - Orden: Page blocks → Components page-only → Responsive
+============================================================================= */
+
+
+/* Hero / Breadcrumb */
+#mensaje-director.section-soft {
+  background:
+    radial-gradient(900px 380px at 15% 10%, rgba(0, 117, 90, 0.12), transparent 55%),
+    radial-gradient(700px 320px at 85% 30%, rgba(0, 34, 79, 0.08), transparent 60%),
+    linear-gradient(180deg, var(--soft), #ffffff);
+}
+
+.page-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(0, 117, 90, 0.10);
+  border: 1px solid rgba(0, 117, 90, 0.18);
+  color: var(--blue);
+  font-weight: 700;
+}
+.page-hero-badge i { color: var(--green); }
+
+/* Título pesado */
+.fw-black { font-weight: 900; }
+
+/* Breadcrumb refinado */
+.breadcrumb {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(10px);
+}
+
+.breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  color: rgba(0, 0, 0, 0.35);
+}
+.breadcrumb .breadcrumb-item a {
+  color: var(--green);
+  font-weight: 700;
+  text-decoration: none;
+}
+.breadcrumb .breadcrumb-item a:hover { text-decoration: underline; }
+.breadcrumb .breadcrumb-item.active {
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 700;
+}
+
+/* Contenido del artículo */
+.content-pro {
+  line-height: 1.85;
+  font-size: 1.02rem;
+}
+.content-pro p { margin-bottom: 14px; }
+.content-pro strong { color: var(--ink); }
+
+
+
+/* Quote del director con glow sutil */
+.quote-box2 { position: relative; overflow: hidden; }
+.quote-box2::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background:
+    radial-gradient(520px 220px at 20% 10%, rgba(0, 117, 90, 0.14), transparent 60%),
+    radial-gradient(520px 220px at 90% 60%, rgba(0, 34, 79, 0.10), transparent 60%);
+  pointer-events: none;
+}
+
+/* Aside */
+.director-aside .icon-3d {
+  background: rgba(0, 117, 90, 0.10);
+  box-shadow: 0 12px 26px rgba(0, 117, 90, 0.14);
+}
+.director-aside .pill-stat {
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+.director-aside .pill-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* CTA final */
+.page-cta-card { position: relative; overflow: hidden; }
+.page-cta-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 380px at 15% 25%, rgba(0, 117, 90, 0.12), transparent 60%),
+    radial-gradient(700px 320px at 90% 55%, rgba(0, 34, 79, 0.10), transparent 62%);
+  pointer-events: none;
+}
+.page-cta-card > * { position: relative; z-index: 1; }
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .breadcrumb { width: 100%; }
+  .content-pro { font-size: 1rem; }
+}
+@media (max-width: 575.98px) {
+  .page-hero-badge { width: 100%; justify-content: center; }
+  .breadcrumb { padding: 10px; }
+}
+
+
+/* =============================================================================
+  PAGE: QUIÉNES SOMOS
+============================================================================= */
+
+#quienes-somos .qs-lead {
+  max-width: 68ch;
+}
+
+.qs-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.qs-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(700px 320px at 18% 15%, rgba(0, 117, 90, 0.10), transparent 60%),
+    radial-gradient(700px 320px at 92% 55%, rgba(0, 34, 79, 0.08), transparent 62%);
+  pointer-events: none;
+}
+
+.qs-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.qs-text {
+  line-height: 1.85;
+  font-size: 1.02rem;
+}
+
+.qs-value {
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+
+.qs-value:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .qs-text { font-size: 1rem; }
+}

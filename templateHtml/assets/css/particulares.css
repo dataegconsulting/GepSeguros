@@ -1,0 +1,26 @@
+/* =============================================================================
+  PAGE: PARTICULARES
+============================================================================= */
+
+.product-card {
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-note {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: .85rem;
+  color: rgba(0,0,0,.55);
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .product-card h3 {
+    font-size: 1.05rem;
+  }
+}

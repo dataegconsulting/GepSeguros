@@ -1,0 +1,31 @@
+/* =============================================================================
+  PAGE: SOLICITAR PRESUPUESTO
+============================================================================= */
+
+.quote-form .form-label {
+  font-weight: 700;
+}
+
+.quote-form .form-control,
+.quote-form .form-select {
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.quote-form .form-control:focus,
+.quote-form .form-select:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0,117,90,.15);
+  border-color: rgba(0,117,90,.45);
+}
+
+/* CTA submit */
+.quote-form button {
+  box-shadow: var(--shadow-md);
+}
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .quote-form {
+    padding: 24px !important;
+  }
+}

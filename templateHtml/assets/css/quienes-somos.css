@@ -1,0 +1,42 @@
+/* =============================================================================
+  GEPETROL SEGUROS – PAGE CSS
+  PAGE: QUIÉNES SOMOS
+  - Solo estilos de esta página
+============================================================================= */
+
+#quienes-somos .qs-lead { max-width: 68ch; }
+
+.qs-panel {
+  position: relative;
+  overflow: hidden;
+}
+
+.qs-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(700px 320px at 18% 15%, rgba(0, 117, 90, 0.10), transparent 60%),
+    radial-gradient(700px 320px at 92% 55%, rgba(0, 34, 79, 0.08), transparent 62%);
+  pointer-events: none;
+}
+
+.qs-panel > * { position: relative; z-index: 1; }
+
+.qs-text {
+  line-height: 1.85;
+  font-size: 1.02rem;
+}
+
+.qs-value {
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+.qs-value:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+  .qs-text { font-size: 1rem; }
+}

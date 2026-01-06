@@ -1,0 +1,112 @@
+/* =============================================================================
+  GEPETROL SEGUROS – PAGE CSS: ESTRUCTURA ORGANIZATIVA (v1.0)
+  - SOLO estilos exclusivos de esta página
+============================================================================= */
+
+.org-lead { max-width: 70ch; }
+
+/* Panel decorativo */
+.org-panel {
+  position: relative;
+  overflow: hidden;
+}
+.org-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(780px 340px at 18% 14%, rgba(0, 117, 90, 0.10), transparent 60%),
+    radial-gradient(780px 340px at 92% 58%, rgba(0, 34, 79, 0.08), transparent 62%);
+  pointer-events: none;
+}
+.org-panel > * { position: relative; z-index: 1; }
+
+/* KPIs hover */
+.org-kpi {
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+.org-kpi:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Aside */
+.org-aside .mini-card {
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+.org-aside .mini-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.org-mini-list {
+  display: grid;
+  gap: 12px;
+}
+
+/* Cards del “organigrama” */
+.org-card { position: relative; overflow: hidden; }
+.org-card::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: var(--radius);
+  background:
+    radial-gradient(520px 220px at 18% 18%, rgba(0, 117, 90, 0.10), transparent 62%),
+    radial-gradient(520px 220px at 92% 62%, rgba(0, 34, 79, 0.08), transparent 62%);
+  pointer-events: none;
+}
+.org-card > * { position: relative; z-index: 1; }
+
+/* Tag (nivel) */
+.org-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.78rem;
+  color: var(--blue);
+  background: rgba(0, 34, 79, 0.06);
+  border: 1px solid rgba(0, 34, 79, 0.10);
+}
+
+/* Lista con iconos */
+.org-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.org-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: rgba(0,0,0,0.75);
+}
+.org-list i {
+  color: var(--green);
+  margin-top: 2px;
+}
+
+/* CTA card reutiliza .page-cta-card global si existe,
+   aquí solo damos un “toque” extra opcional */
+.page-cta-card {
+  position: relative;
+  overflow: hidden;
+}
+.page-cta-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 380px at 15% 25%, rgba(0, 117, 90, 0.10), transparent 60%),
+    radial-gradient(700px 320px at 90% 55%, rgba(0, 34, 79, 0.08), transparent 62%);
+  pointer-events: none;
+}
+.page-cta-card > * { position: relative; z-index: 1; }
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .org-tag { font-size: 0.75rem; }
+}

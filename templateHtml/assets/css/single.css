@@ -1,0 +1,123 @@
+/* =============================================================================
+  PAGE: SINGLE (Noticia)
+  - CSS por página (NO meter navbar/mega/footer global aquí)
+============================================================================= */
+
+.single-article { overflow: hidden; }
+
+/* Meta pills */
+.single-meta { row-gap: 10px; }
+
+.single-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0, 117, 90, 0.12);
+  border: 1px solid rgba(0, 117, 90, 0.18);
+  color: var(--blue);
+  font-weight: 800;
+}
+
+.single-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  color: rgba(0, 0, 0, 0.70);
+  font-weight: 700;
+}
+
+.single-cover {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.single-cover img {
+  width: 100%;
+  display: block;
+}
+
+/* Tipografía interna */
+.single-h2 {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-weight: 900;
+  letter-spacing: -0.3px;
+}
+
+.single-h3 {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  color: var(--ink);
+  font-weight: 900;
+}
+
+.single-list {
+  padding-left: 18px;
+  margin-bottom: 14px;
+}
+.single-list li { margin-bottom: 8px; }
+
+/* Quote */
+.single-quote {
+  position: relative;
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(0, 117, 90, 0.08);
+  border: 1px solid rgba(0, 117, 90, 0.16);
+  overflow: hidden;
+}
+
+.single-quote::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background:
+    radial-gradient(520px 220px at 20% 10%, rgba(0, 117, 90, 0.14), transparent 60%),
+    radial-gradient(520px 220px at 90% 60%, rgba(0, 34, 79, 0.10), transparent 60%);
+  pointer-events: none;
+}
+
+.single-quote > * { position: relative; z-index: 1; }
+
+/* Aside */
+.single-aside .single-aside-box {
+  border-radius: 18px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: var(--shadow-sm);
+  padding: 14px;
+}
+
+.single-related {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #111;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.single-related:hover {
+  background: rgba(0, 117, 90, 0.10);
+  transform: translateX(4px);
+}
+
+.single-related i { color: var(--green); }
+
+/* Responsive */
+@media (max-width: 575.98px) {
+  .single-pill, .single-tag { width: 100%; justify-content: center; }
+}

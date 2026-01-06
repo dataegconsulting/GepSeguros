@@ -1,0 +1,83 @@
+/* =============================================================================
+  GEPETROL SEGUROS – PAGE CSS
+  PAGE: MENSAJE DEL DIRECTOR (Quiénes somos / Dirección)
+  - Solo estilos de esta página
+  - No incluye navbar/mega/footer global
+============================================================================= */
+
+/* -----------------------------------------------------------------------------
+  1) HERO / BREADCRUMB (Mensaje del Director)
+----------------------------------------------------------------------------- */
+#mensaje-director.section-soft {
+  background:
+    radial-gradient(900px 380px at 15% 10%, rgba(0, 117, 90, 0.12), transparent 55%),
+    radial-gradient(700px 320px at 85% 30%, rgba(0, 34, 79, 0.08), transparent 60%),
+    linear-gradient(180deg, var(--soft), #ffffff);
+}
+
+/* -----------------------------------------------------------------------------
+  2) CONTENIDO ARTÍCULO
+----------------------------------------------------------------------------- */
+.content-pro {
+  line-height: 1.85;
+  font-size: 1.02rem;
+}
+.content-pro p { margin-bottom: 14px; }
+.content-pro strong { color: var(--ink); }
+
+/* Quote con glow sutil */
+.quote-box2 { position: relative; overflow: hidden; }
+.quote-box2::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 18px;
+  background:
+    radial-gradient(520px 220px at 20% 10%, rgba(0, 117, 90, 0.14), transparent 60%),
+    radial-gradient(520px 220px at 90% 60%, rgba(0, 34, 79, 0.10), transparent 60%);
+  pointer-events: none;
+}
+
+/* -----------------------------------------------------------------------------
+  3) ASIDE (Perfil Director)
+  Nota: en tu HTML actual NO tienes .director-aside
+  -> o añades class="director-aside" al <aside>, o cambiamos selector.
+----------------------------------------------------------------------------- */
+.director-aside .icon-3d {
+  background: rgba(0, 117, 90, 0.10);
+  box-shadow: 0 12px 26px rgba(0, 117, 90, 0.14);
+}
+.director-aside .pill-stat {
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+.director-aside .pill-stat:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* -----------------------------------------------------------------------------
+  4) CTA FINAL (si le pones class="page-cta-card" al card-3d del CTA)
+----------------------------------------------------------------------------- */
+.page-cta-card { position: relative; overflow: hidden; }
+.page-cta-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 380px at 15% 25%, rgba(0, 117, 90, 0.12), transparent 60%),
+    radial-gradient(700px 320px at 90% 55%, rgba(0, 34, 79, 0.10), transparent 62%);
+  pointer-events: none;
+}
+.page-cta-card > * { position: relative; z-index: 1; }
+
+/* -----------------------------------------------------------------------------
+  5) RESPONSIVE
+----------------------------------------------------------------------------- */
+@media (max-width: 991.98px) {
+  .breadcrumb { width: 100%; }
+  .content-pro { font-size: 1rem; }
+}
+@media (max-width: 575.98px) {
+  .page-hero-badge { width: 100%; justify-content: center; }
+  .breadcrumb { padding: 10px; }
+}

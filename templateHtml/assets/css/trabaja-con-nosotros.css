@@ -1,0 +1,63 @@
+/* =============================================================================
+  GEPETROL SEGUROS – PAGE CSS: TRABAJA CON NOSOTROS (v1.0)
+  - SOLO estilos exclusivos de esta página
+============================================================================= */
+
+.jobs-lead { max-width: 72ch; }
+
+/* Panel decorativo */
+.jobs-panel {
+  position: relative;
+  overflow: hidden;
+}
+.jobs-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(780px 340px at 18% 14%, rgba(0, 117, 90, 0.10), transparent 60%),
+    radial-gradient(780px 340px at 92% 58%, rgba(0, 34, 79, 0.08), transparent 62%);
+  pointer-events: none;
+}
+.jobs-panel > * { position: relative; z-index: 1; }
+
+/* mini cards hover */
+.jobs-card {
+  transition: transform 180ms ease, box-shadow 220ms ease;
+}
+.jobs-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Aside */
+.jobs-aside form .form-control,
+.jobs-aside form .form-select {
+  border-radius: 14px;
+}
+
+.jobs-aside form .form-control:focus,
+.jobs-aside form .form-select:focus {
+  border-color: rgba(0, 117, 90, 0.35);
+  box-shadow: 0 0 0 0.25rem rgba(0, 117, 90, 0.14);
+}
+
+/* CTA card: toque suave */
+.page-cta-card {
+  position: relative;
+  overflow: hidden;
+}
+.page-cta-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(900px 380px at 15% 25%, rgba(0, 117, 90, 0.10), transparent 60%),
+    radial-gradient(700px 320px at 90% 55%, rgba(0, 34, 79, 0.08), transparent 62%);
+  pointer-events: none;
+}
+.page-cta-card > * { position: relative; z-index: 1; }
+
+@media (max-width: 575.98px) {
+  #jobsStatus { font-size: 0.92rem; }
+}

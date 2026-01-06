@@ -1,0 +1,295 @@
+/*
+Theme Name: GepetrolSeguros
+Theme URI: https://gepetrolseguros.gq
+Author: Filiberto Mba Obama - DATA EG 
+Author URI: https://dataeg.com
+Description: Seguros de coches, vidas sald...
+Version: 2.0
+License:
+- GNU General Public License v2 or later
+License URI:
+- http://www.gnu.org/licenses/gpl-2.0.html
+
+Text Domain: gepetrol
+*/
+
+:root {
+  --blue-text: #00224f;
+  --blue-background: #0d294f;
+  --green-text: #00755a;
+  --green-background: #006951;
+  --white-text: #fff;
+  --white-background: #fff;
+  --border-light: #e5e5e5;
+  --background-light: #e5e5e5;
+  --gray: #888888;
+  --menu-dropdown:#121212;
+
+
+
+  /* --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+    --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;*/
+}
+  
+.sec-title h1 { 
+  display: block;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--green-text);
+}
+
+.pricing-section .sec-title h2 { 
+  font-size: 30px; 
+}
+
+.table-footer { 
+  margin-left: 40px; 
+}
+
+
+.post-service {
+  margin: 100px 0 ;
+  /* padding: 10px 0; */
+  position: relative;
+  overflow: auto;
+}
+
+.post-service .btn-box{
+  margin-top: 25px;
+}
+
+.news-image  {
+  padding-right: 0px!important; 
+  padding-left: 0px!important;
+}
+
+
+.post-service {
+clear: both;
+/* border-top: 10px solid #132950; */ 
+}
+
+
+.post-service:nth-child(n+1) .news-info {
+  float: right;
+}
+.post-service:nth-child(n+1) .news-image {
+  float: left;
+  padding-left: 0px!important;
+  padding-right: 110px!important;
+}
+
+.post-service:nth-child(n+2) .news-info {
+  float: left;
+}
+.post-service:nth-child(n+2) .news-image {
+  float: right;
+  padding-left: 110px!important;
+  padding-right: 0px!important;
+}
+
+.post-service:nth-child(n+3) .news-info {
+  float: right;
+}
+.post-service:nth-child(n+3) .news-image {
+  float: left;
+  padding-left: 0px!important;
+  padding-right: 110px!important;
+}
+
+.post-service:nth-child(n+4) .news-info {
+  float: left;
+}
+.post-service:nth-child(n+4) .news-image {
+  float: right;
+  padding-left: 110px!important;
+  padding-right: 0px!important;
+}
+
+.post-service:nth-child(n+5) .news-info {
+  float: right;
+}
+.post-service:nth-child(n+5) .news-image {
+  float: left;
+  padding-left: 0px!important;
+  padding-right: 110px!important;
+}
+
+.post-service:nth-child(n+6) .news-info {
+  float: left;
+}
+
+.post-service:nth-child(n+6) .news-image {
+  float: right;
+  padding-left: 110px!important;
+  padding-right: 0px!important;
+}
+
+.service-block-two .inner-box { 
+  padding: 50px 30px 50px 40px!important; 
+}
+
+ 
+
+.lower-content .list-item li {
+  position: relative;
+  display: block;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: 'Poppins', sans-serif;
+  color: #00224f;
+  font-weight: 500;
+  margin-bottom: 19px;
+  padding-left: 35px;
+}
+
+.lower-content .list-item li:before {
+  position: absolute;
+  left: 0px;
+  top: 3px;
+  content: "\f00c";
+  font-family: 'Font Awesome 5 Pro';
+  font-size: 10px;
+  color: #00224f;
+  font-weight: 700;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  transition: all 500ms ease;
+}
+
+.wpcf7-form  .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%!important;
+}
+
+.contact-text h3 {
+    font-family: Poppins;
+    line-height: 47px;
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-style: normal;
+    color: #1d1847;
+    font-size: 35px;
+    margin-bottom: 80px;
+}
+
+.contacto-info-servicios {
+    margin-top: 20px;
+}
+
+/* Buton*/
+
+.theme-btn-one-cliente{
+	background: #132950;
+}
+
+.main-header .menu-right-content li .theme-btn-one-cliente{
+  box-shadow: none;
+  padding: 17px 90px 17px 35px;
+}
+
+.main-header .menu-right-content li .theme-btn-one-cliente i{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 0px 5px 5px 0px;
+  background: rgba(0,0,0,0.1);
+  line-height: 60px;
+  text-align: center;
+}
+
+.theme-btn-one-cliente{
+  position: relative;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 26px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #fff !important;
+  text-align: center;
+  padding: 17px 37px;
+  border-radius: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 1;
+  box-shadow: 0 20px 30px rgb(211, 220, 232, 0.8);
+  transition: all 500ms ease;
+}
+
+.theme-btn-one-cliente:hover{
+  background: #00755a;
+}
+
+.theme-btn-one-cliente:before{
+  position: absolute;
+  content: '';
+  background: #00755a;
+  width: 0%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  border-radius: 5px;
+  z-index: -1;
+  transition: all 500ms ease;
+}
+
+.theme-btn-one-cliente:hover:before{
+  width: 100%;
+  opacity: 1;
+}
+
+
+/* FORMULARIO BANCOS */
+/* 
+@media (min-width: 769px)
+.fw-large-container .fw-progress-bar .fw-progress-step .fw-txt-ellipsis {
+    width: 1000px!important;
+}
+
+@media (min-width: 769px)
+.fw-large-container .fw-progress-bar .fw-progress-step.fw-active:last-child .fw-progress-bar-bar {
+    display: none!important;
+}
+
+@media (min-width: 769px)
+.fw-large-container .fw-progress-bar .fw-progress-step:last-child {
+     display: none!important;
+}
+
+@media (min-width: 769px)
+.fw-large-container .fw-progress-bar-container {
+    display: none!important;
+}
+
+@media (min-width: 1023px)
+.fw-progress-bar-container {
+    display: none!important;
+} */
