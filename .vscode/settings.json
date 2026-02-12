@@ -1,9 +1,6 @@
 {
   "github.copilot.enable": {
-    "*": true,
-    "yaml": true,
-    "plaintext": true,
-    "markdown": true
+    "*": true
   },
   "github.copilot.editor.enableAutoCompletions": true
 }
